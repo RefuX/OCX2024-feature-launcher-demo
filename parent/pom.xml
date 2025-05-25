@@ -278,7 +278,7 @@
                 <artifactItems>
                   <artifactItem>
                     <groupId>org.eclipse.osgi-technology.featurelauncher.launch</groupId>
-                    <artifactId>all.maven</artifactId>
+                    <artifactId>launcher</artifactId>
                     <destFileName>launcher.jar</destFileName>
                     <outputDirectory>${project.build.directory}</outputDirectory>
                   </artifactItem>
