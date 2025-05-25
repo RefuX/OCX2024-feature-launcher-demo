@@ -26,17 +26,6 @@
         <enabled>true</enabled>
       </snapshots>
     </repository>
-    <repository>
-      <!-- Kentyou prototype feature launcher -->
-      <id>github</id>
-      <url>https://maven.pkg.github.com/kentyou/feature-launcher-prototype</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>
   </repositories>
   
   <properties>
@@ -71,10 +60,14 @@
         <scope>runtime</scope>
       </dependency>
       <dependency>
-        <groupId>com.kentyou</groupId>
-        <artifactId>featurelauncher</artifactId>
+        <groupId>org.eclipse.osgi-technology.featurelauncher.launch</groupId>
+        <artifactId>launcher</artifactId>
         <version>1.0.0-SNAPSHOT</version>
-        <scope>runtime</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.eclipse.osgi-technology.featurelauncher.repository</groupId>
+        <artifactId>artifact.maven</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
       </dependency>
       <dependency>
         <groupId>org.glassfish</groupId>
@@ -284,8 +277,8 @@
               <configuration>
                 <artifactItems>
                   <artifactItem>
-                    <groupId>com.kentyou</groupId>
-                    <artifactId>featurelauncher</artifactId>
+                    <groupId>org.eclipse.osgi-technology.featurelauncher.launch</groupId>
+                    <artifactId>all.maven</artifactId>
                     <destFileName>launcher.jar</destFileName>
                     <outputDirectory>${project.build.directory}</outputDirectory>
                   </artifactItem>
