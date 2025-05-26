@@ -1,9 +1,11 @@
 package com.kentyou.ocx2024.featurelauncher.demo2;
 
 import java.io.BufferedReader;
+import java.net.URI;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.ServiceLoader;
 
@@ -22,11 +24,20 @@ public class API_Launcher {
 
 		Path targetDir = Paths.get("target");
 		
-		ArtifactRepository repository = launcher.createRepository(targetDir.resolve("repo"));
-		
+		ArtifactRepository repositoryMaven = launcher.createRepository(
+				URI.create("https://repo.maven.apache.org/maven2/"),
+				new HashMap<>()
+		);
+
+		ArtifactRepository repositorySonatype = launcher.createRepository(
+				URI.create("https://oss.sonatype.org/content/repositories/snapshots/"),
+				new HashMap<>()
+		);
+
 		BufferedReader feature = Files.newBufferedReader(targetDir.resolve("features/gogo.json"));
 		Framework launchFramework = launcher.launch(feature)
-			.withRepository(repository)
+			.withRepository(repositoryMaven)
+			.withRepository(repositorySonatype)
 			.withFrameworkProperties(Map.of(Constants.FRAMEWORK_STORAGE_CLEAN,
 					Constants.FRAMEWORK_STORAGE_CLEAN_ONFIRSTINIT))
 			.launchFramework();

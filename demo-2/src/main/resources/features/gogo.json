@@ -20,7 +20,7 @@
       "id": "org.osgi:org.osgi.service.component:1.5.1"
     },
     {
-      "id": "com.kentyou:featurelauncher:1.0.0-SNAPSHOT"
+      "id": "org.eclipse.osgi-technology.featurelauncher.launch:launcher:1.0.0-SNAPSHOT"
     },
     {
       "id": "com.fasterxml.woodstox:woodstox-core:7.0.0"
