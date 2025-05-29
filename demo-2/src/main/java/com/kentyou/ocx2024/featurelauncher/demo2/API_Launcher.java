@@ -34,10 +34,15 @@ public class API_Launcher {
 				new HashMap<>()
 		);
 
+//		ArtifactRepository localRepo = launcher.createRepository(Paths.get("/Users/jamesroome/.m2/repository/"));
+//		ArtifactRepository demo2Command = launcher.createRepository(Paths.get("/Users/jamesroome/Development/OCX2024-feature-launcher-demo/repo"));
+
 		BufferedReader feature = Files.newBufferedReader(targetDir.resolve("features/gogo.json"));
 		Framework launchFramework = launcher.launch(feature)
-			.withRepository(repositoryMaven)
+//			.withRepository(localRepo)
+//			.withRepository(demo2Command)
 			.withRepository(repositorySonatype)
+			.withRepository(repositoryMaven)
 			.withFrameworkProperties(Map.of(Constants.FRAMEWORK_STORAGE_CLEAN,
 					Constants.FRAMEWORK_STORAGE_CLEAN_ONFIRSTINIT))
 			.launchFramework();

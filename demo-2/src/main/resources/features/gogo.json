@@ -20,7 +20,25 @@
       "id": "org.osgi:org.osgi.service.component:1.5.1"
     },
     {
-      "id": "org.eclipse.osgi-technology.featurelauncher.launch:launcher:1.0.0-SNAPSHOT"
+      "id": "org.eclipse.osgi-technology.featurelauncher.repository:common.osgi:1.0.0-SNAPSHOT"
+    },
+    {
+      "id": "org.eclipse.osgi-technology.featurelauncher.repository:spi:1.0.0-SNAPSHOT"
+    },
+    {
+      "id": "org.eclipse.osgi-technology.featurelauncher.repository:maven:1.0.0-SNAPSHOT"
+    },
+    {
+      "id": "org.eclipse.osgi-technology.featurelauncher.repository:artifact.maven:1.0.0-SNAPSHOT"
+    },
+    {
+      "id": "org.eclipse.osgi-technology.featurelauncher:common:1.0.0-SNAPSHOT"
+    },
+    {
+      "id": "org.eclipse.osgi-technology.featurelauncher:common.osgi:1.0.0-SNAPSHOT"
+    },
+    {
+      "id": "org.eclipse.osgi-technology.featurelauncher:runtime:1.0.0-SNAPSHOT"
     },
     {
       "id": "com.fasterxml.woodstox:woodstox-core:7.0.0"
@@ -95,7 +113,12 @@
       "id": "org.codehaus.woodstox:stax2-api:4.2.2"
     },
     {
-      "id": "com.kentyou.ocx2024.featurelauncher:demo2-command:0.0.1-SNAPSHOT"
+      "id": "com.kentyou.ocx2024.featurelauncher.demo2:demo2-command:0.0.1-SNAPSHOT"
     }
-  ]
+  ],
+  "configurations": {
+    "osgi.technology.featurelauncher.runtime": {
+      "local.repositories.enabled": true
+    }
+  }
 }
