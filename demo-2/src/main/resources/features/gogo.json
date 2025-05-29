@@ -26,9 +26,6 @@
       "id": "org.eclipse.osgi-technology.featurelauncher.repository:spi:1.0.0-SNAPSHOT"
     },
     {
-      "id": "org.eclipse.osgi-technology.featurelauncher.repository:maven:1.0.0-SNAPSHOT"
-    },
-    {
       "id": "org.eclipse.osgi-technology.featurelauncher.repository:artifact.maven:1.0.0-SNAPSHOT"
     },
     {
